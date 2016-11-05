@@ -12,7 +12,7 @@ var element = document.getElementById("main-text"
  );
  
  var marginLeft = 0;
- function marginRight() {
+ function moveRight() {
      marginLeft = marginLeft + 10;
      img.style.marginLeft = marginLeft + 'px'
      
