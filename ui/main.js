@@ -10,7 +10,15 @@ var element = document.getElementById("main-text"
  
  var img = document.getElementById("dino"
  );
- img.onclick = function()  {
+ 
+ var marginLeft = 0;
+ function marginRight() {
+     marginLeft = marginLeft + 10;
+     img.style.marginLeft = marginLeft + 'px'
      
-   img.style.marginLeft = '100px';  
+ }
+ 
+ img.onclick = function()  {
+    var interval = setInterval(moveRight, 100);  
+     
  };
