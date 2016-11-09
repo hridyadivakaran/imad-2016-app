@@ -29,16 +29,14 @@ Submit.onclick = function() {
      if(request.readyState === XMLhttpRequest.DONE) {
       if(request.status === 200){
           var name = request.responseText;
-           name = JSON.parse(names);
-           var list ='';
-           for(var i=0; i<names.length; i++){
-        list += '<li>' + names[i] + '</li>';
+           name = JSON.parse(name);
+           var list =" ";
+           for (var i=0; i<name.length; i++){
+        list += '<li>' + name[i] + '</li>';
         
     }
     var ul = document.getElementById('namelist');
     ul.innerHTML = list;
-   
-           
       }
      }
     };
