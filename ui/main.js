@@ -31,6 +31,6 @@ Submit.onclick = function() {
         list += '<li>' + names[i] + '</li>';
         
     }
-    var ul = document.getElementById('names.list');
+    var ul = document.getElementById('nameslist');
     ul.innerHTML = list;
 };
