@@ -9,14 +9,20 @@ button.onclick = function() {
     request.onreadystateChange = function() {
      if(request.readyState === XMLhttpRequest.DONE) {
       if(request.status === 200){
-          var counter = request.responseText;
-          var span = document.getElementById("count");
-          span.innerHTML = counter.toString();
+           var name = request.responseText;
+           name = JSON.parse(names);
+    var list ='';
+    for(var i=0; i<names.length; i++){
+        list += '<li>' + names[i] + '</li>';
+        
+    }
+    var ul = document.getElementById('namelist');
+    ul.innerHTML = list;
       }
      }
     };
     
-    request.open('GET','http://hridyadivakaran.imad.hasura-app.io/counter', true);
+    request.open('GET','http://hridyadivakaran.imad.hasura-app.io/Submit-name?name=' + name, true);
     request.send(null);
 };
 
@@ -25,12 +31,5 @@ var name = nameInput.value;
 var Submit = document.getElementById('Submit_btn');
 Submit.onclick = function() {
     
-    var name = ['name1', 'name2', 'name3'];
-    var list ='';
-    for(var i=0; i<name.length; i++){
-        list += '<li>' + name[i] + '</li>';
-        
-    }
-    var ul = document.getElementById('namelist');
-    ul.innerHTML = list;
+   
 };
