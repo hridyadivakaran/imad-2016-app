@@ -90,10 +90,10 @@ app.get('/counter', function(req, res){
    res.send(counter.toString());
 });
 
-var name = [];
-app.get('/:Submit-name', function (req, res){
+var names = [];
+app.get('/Submit-name', function (req, res){
    var name = req.query.name;
-   name.push(name);
+   names.push(name);
    res.send(JSON.stringify(name));
 });
 
