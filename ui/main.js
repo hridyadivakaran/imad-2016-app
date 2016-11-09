@@ -20,8 +20,7 @@ button.onclick = function() {
     request.send(null);
 };
 
-var nameInput = document.getElementById('name');
-var name = nameInput.value;
+
 var Submit = document.getElementById('Submit_btn');
 Submit.onclick = function() {
      var request = new XMLhttpRequest();
@@ -43,6 +42,8 @@ Submit.onclick = function() {
       }
      }
     };
+    var nameInput = document.getElementById('name');
+    var name = nameInput.value;
     
     request.open('GET','http://hridyadivakaran.imad.hasura-app.io/Submit-name?name=' + name, true);
     request.send(null);
