@@ -19,3 +19,18 @@ button.onclick = function() {
     request.open('GET','http://hridyadivakaran.imad.hasura-app.io/counter', true);
     request.send(null);
 };
+
+var nameInput = document.getElementById('name');
+var name = nameInput.value;
+var Submit = document.getElementById('Submit_btn');
+Submit.onclick = function() {
+    
+    var name = ['name1', 'name2', 'name3'];
+    var list ='';
+    for(var i=0; i<names.length; i++){
+        list += '<li>' + names[i] + '</li>';
+        
+    }
+    var ul = document.getElementById('names.list');
+    ul.innerHTML = list;
+};
