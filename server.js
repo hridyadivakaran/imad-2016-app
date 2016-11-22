@@ -8,6 +8,7 @@ var config = {
  user: 'hridyadivakaran',
  password: process.env,DB_PASSWORD,
  database: 'hridyadivakaran',
+ port: '5432'
 };
 var app = express();
 app.use(morgan('combined'));
