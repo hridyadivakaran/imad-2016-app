@@ -118,7 +118,7 @@ app.get('/Submit-name', function (req, res){
    res.send(JSON.stringify(names));
 });
 
-app.get('/:articleName', function (req, res){
+app.get('/articleName', function (req, res){
     var articleName = req.params.articleName;
     res.send(createTemplate(article[articleName]));
 });
