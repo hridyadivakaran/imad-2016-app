@@ -97,7 +97,7 @@ app.get('/test-db', function (req, res){
      pool.query('SELECT * FROM test', function(err, result) {
       // handle an error from the query
       if(err) {
-          res.status;
+          res.status(500).send(err.toString());
       }else{
       res.writeHead(200, {'content-type': 'text/plain'});
       res.end('You are visitor number ' + result.rows[0].count);
