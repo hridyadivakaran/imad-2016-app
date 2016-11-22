@@ -2,7 +2,7 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var Pool = require('pg').Pool;
-
+alert("hi-1");
 var config = {
  host: 'db.imad.hasura-app.io',
  user: 'hridyadivakaran',
@@ -12,7 +12,7 @@ var config = {
 };
 var app = express();
 app.use(morgan('combined'));
-
+alert("hi-2");
 var article = { 
    'article-one' : {
     title: 'Article-one : HRIDYA DIVAKARAN' ,
@@ -49,6 +49,7 @@ var article = {
             </p>`
             
    }
+   alert("hi-3");
 };
 function createTemplate (data){
  var title = data.title;
@@ -84,6 +85,7 @@ function createTemplate (data){
 </html>
 
 `;
+alert("hi-4");
 return htmlTemplate;
 }
 
@@ -91,13 +93,11 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-
+alert("hi-5");
 var pool = new Pool(config);
-alert("hi");
 app.get('/test-db' , function (req, res){
      pool.query('SELECT * FROM test', function(err, result) {
        //handle an error from the query
-      alert("hi");
       if(err) {
           res.status(500).send(err.toString());
       }else{
@@ -126,7 +126,7 @@ app.get('/:articleName', function (req, res){
 });
 
 
-
+alert("hi-6");
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
