@@ -22,7 +22,7 @@ button.onclick = function() {
 
 function goToAboutUS() {
     var request = new XMLhttpRequest();
-    request.open('GET','http://hridyadivakaran.imad.hasura-app.io/counter', true);
+    request.open('GET','http://hridyadivakaran.imad.hasura-app.io/ui/aboutUS.html', true);
     request.send(null);
 }
 var button = document.getElementById("link");
