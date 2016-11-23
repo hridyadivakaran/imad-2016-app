@@ -38,6 +38,10 @@ button.onclick = function() {
     request.open('GET','http://hridyadivakaran.imad.hasura-app.io/about us', true);
     request.send(null);
 };
+function createAccount () {
+    var create = document.getElementById('create-account');
+    create.value = "Success";
+}
 
 var Submit = document.getElementById('Submit_btn');
 Submit.onclick = function() {
