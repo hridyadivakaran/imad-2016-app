@@ -141,7 +141,10 @@ app.get('/article/:articleName', function (req, res){
     });
     });
 
-
+/*
+New code-Sree
+to register the new files that have been created
+*/
 app.get('/ui/register.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'register.html'));
 });
@@ -153,6 +156,7 @@ app.get('/ui/aboutUS.html', function (req, res) {
 app.get('/ui/index.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
+//change finishes here
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
