@@ -21,7 +21,7 @@ button.onclick = function() {
 };
 
 var button = document.getElementById("link");
-alert("hi "+button.value);
+
 button.onclick = function() {
     
     var request = new XMLhttpRequest();
