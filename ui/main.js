@@ -39,7 +39,24 @@ button.onclick = function() {
     request.send(null);
 };
 function createAccount () {
+    var Pool = require('pg').Pool;
+
+    var config = {
+     host: 'db.imad.hasura-app.io',
+     user: 'hridyadivakaran',
+     password: process.env.DB_PASSWORD,
+     database: 'hridyadivakaran',
+     port: '5432'
+    };
     
+    var pool = new Pool(config);
+    pool.query('INSERT INTO user (name,email,username,passowrd) VALUES (sree,sree123,sfr,tre)', function(err) {
+    if (err) {
+       console.log('error');
+    }else {
+       console.log('no error');
+    }
+    });
     document.location.href = '/ui/successMessage.html';
 }
 
