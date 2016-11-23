@@ -40,7 +40,7 @@ button.onclick = function() {
 };
 function createAccount () {
     var create = document.getElementById('create-account');
-    create.value = "Success";
+    $('#successmsg').html("You have been successfully registered");
 }
 
 var Submit = document.getElementById('Submit_btn');
