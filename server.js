@@ -105,7 +105,13 @@ app.get('/test-db' , function (req, res){
     });
 });
 
-
+var pool = new Pool(config);
+app.get('/user' , function (req, res){
+pool.query('INSERT INTO user (name,email,username,password) VALUES (sree,sree123,sfre,fer)', function(err) {
+    if (err) console.log('error');
+    else console.log('no error');
+  });
+});
     
 var counter = 0;
 app.get('/counter', function(req, res){
