@@ -43,6 +43,7 @@ function createAccount () {
     creates.value = "You have been successfully registered";
     var create = document.getElementById('successmsg');
     create.innerText("You have been successfully registered");
+    document.register.submit();
 }
 
 var Submit = document.getElementById('Submit_btn');
