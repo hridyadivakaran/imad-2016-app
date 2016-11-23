@@ -41,9 +41,7 @@ button.onclick = function() {
 function createAccount () {
      var creates = document.getElementById('create-account');
     creates.value = "You have been successfully registered";
-    var create = document.getElementById('successmsg');
-    create.innerText("You have been successfully registered");
-    document.register.submit();
+    document.location.href = '/ui/successMessage.html';
 }
 
 var Submit = document.getElementById('Submit_btn');
