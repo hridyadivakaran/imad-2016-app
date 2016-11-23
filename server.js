@@ -156,6 +156,10 @@ app.get('/ui/aboutUS.html', function (req, res) {
 app.get('/ui/index.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
+
+app.get('/ui/successMessage.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'successMessage.html'));
+});
 //change finishes here
 
 app.get('/ui/style.css', function (req, res) {
