@@ -39,7 +39,7 @@ button.onclick = function() {
     request.send(null);
 };
 function createAccount () {
-    document.location.href = '/user-db';
+    document.location.href = '/user';
     //document.location.href = '/ui/successMessage.html';
 }
 
