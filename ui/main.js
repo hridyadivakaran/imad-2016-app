@@ -40,7 +40,7 @@ button.onclick = function() {
 };
 function createAccount () {
     document.location.href = '/user-db';
-    document.location.href = '/ui/successMessage.html';
+    //document.location.href = '/ui/successMessage.html';
 }
 
 var Submit = document.getElementById('Submit_btn');
