@@ -142,11 +142,11 @@ app.get('/article/:articleName', function (req, res){
     });
 
 
-app.get('/ui/style.css', function (req, res) {
+app.get('/ui/register.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'register.html'));
 });
 
-app.get('/ui/style.css', function (req, res) {
+app.get('/ui/aboutUS.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'aboutUS.html'));
 });
 
