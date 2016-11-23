@@ -66,8 +66,7 @@ Submit.onclick = function() {
     
     
 };
-
 function aboutUS() {
  console.log("hi");   
 }
-}
+
