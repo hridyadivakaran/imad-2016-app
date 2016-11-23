@@ -2,7 +2,7 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var Pool = require('pg').Pool;
-
+console.log("password "+process.env.DB_PASSWORD);
 var config = {
  host: 'db.imad.hasura-app.io',
  user: 'hridyadivakaran',
@@ -174,7 +174,17 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
+var pool = new Pool(config);
+pool.query('INSERT INTO visit (date) VALUES ($1)', [new Date()], function(err) {
+    if (err) return onError(err);
 
+    // get the total number of visits today (including the current visit)
+    pool.query('SELECT COUNT(date) AS count FROM visit', function(err, result) {
+      // handle an error from the query
+      if(err) return onError(err);
+      res.writeHead(200, {'content-type': 'text/plain'});
+      res.end('You are visitor number ' + result.rows[0].count);
+    });
 
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
