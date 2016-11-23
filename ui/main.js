@@ -39,6 +39,8 @@ button.onclick = function() {
     request.send(null);
 };
 function createAccount () {
+     var creates = document.getElementById('create-account');
+    creates.value = "You have been successfully registered";
     var create = document.getElementById('successmsg');
     create.innerText("You have been successfully registered");
 }
