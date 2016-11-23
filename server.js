@@ -50,6 +50,7 @@ var article = {
             
    }
 };
+
 function createTemplate (data){
  var title = data.title;
  var date = data.date;
@@ -116,6 +117,11 @@ app.get('/Submit-name', function (req, res){
    var name = req.query.name;
    names.push(name);
    res.send(JSON.stringify(names));
+});
+
+var link =
+app.get('/about us', function (req, res){
+   res.sendFile(path.join(__dirname, 'ui', 'main.js')); 
 });
 
 app.get('/article/:articleName', function (req, res){
