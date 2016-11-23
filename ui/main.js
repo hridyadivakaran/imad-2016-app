@@ -39,14 +39,7 @@ button.onclick = function() {
     request.send(null);
 };
 function createAccount () {
-    var pool = new Pool(config);
-    pool.query('INSERT INTO user (name,email,username,passowrd) VALUES (sree,sree123,sfr,tre)', function(err) {
-    if (err) {
-       console.log('error');
-    }else {
-       console.log('no error');
-    }
-    });
+    
     document.location.href = '/ui/successMessage.html';
 }
 
