@@ -19,12 +19,6 @@ button.onclick = function() {
     request.open('GET','http://hridyadivakaran.imad.hasura-app.io/counter', true);
     request.send(null);
 };
-
-function goToAboutUS() {
-    var request = new XMLhttpRequest();
-    request.open('GET','http://hridyadivakaran.imad.hasura-app.io/ui/aboutUS.html', true);
-    request.send(null);
-}
 var button = document.getElementById("link");
 
 button.onclick = function() {
