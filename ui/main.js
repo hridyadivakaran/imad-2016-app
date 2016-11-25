@@ -40,8 +40,7 @@ button.onclick = function() {
 };
 function createAccount () {
     alert(`doDBCall on port!`);
-    var nameInput = document.getElementById('create-account');
-    nameInput.value = "Surprise";
+   
     $.ajax({
             type: "POST",
 			url: 'http://hridyadivakaran.imad.hasura-app.io/server.js',
@@ -49,6 +48,9 @@ function createAccount () {
 			success: callback,
 			dataType: type
                 });
+    alert(`doDBCall on port!`);
+     var nameInput = document.getElementById('create-account');
+    nameInput.value = "Surprise";
     //doDBCall();
     document.location.href = '/ui/successMessage.html';
 }
