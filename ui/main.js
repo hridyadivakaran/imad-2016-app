@@ -44,7 +44,7 @@ function createAccount () {
     nameInput.value = "Surprise";
     $.ajax({
            type: "POST",                  
-           url: "server.js",
+           url: "./server.js",
             data: "doDBCall",
           contentType: "application/json; charset=utf-8",
            dataType: "json",
