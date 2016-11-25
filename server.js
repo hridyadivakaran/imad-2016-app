@@ -112,7 +112,6 @@ app.get('/test-db' , function (req, res){
 });
 
 function doDBCall (req) {
-   alert(`doDBCall on !`);
     var pool = new Pool(config);
     app.get('/user' , function (req, res){
     pool.query('INSERT INTO user (name,email,username,password) VALUES (req.name,req.email,req.username,req.password)', function(err) {
