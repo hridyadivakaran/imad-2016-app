@@ -51,7 +51,7 @@ function createAccount () {
       url: "http://hridyadivakaran.imad.hasura-app.io/register-me",
       method: "POST",
       data:{
-          name: "sreepad"
+          "name": "sreepad"
             },
       headers: {
         "content-type": "application/json",
