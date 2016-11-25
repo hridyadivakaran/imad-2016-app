@@ -39,9 +39,9 @@ button.onclick = function() {
     request.send(null);
 };
 function createAccount () {
-    var validation = doValidation();
+    //var validation = doValidation();
     //document.location.href = '/ui/successMessage.html';
-    if(validation === "") {
+    //if(validation === "") {
     var settings = {
       "async": true,
       "crossDomain": true,
@@ -64,9 +64,9 @@ function createAccount () {
       console.log(response);
     });
        document.location.href = '/ui/successMessage.html';
-    }else {
-        alert(validation);
-    }
+    //}else {
+      //  alert(validation);
+    //}
 }
 function doValidation() {
     var name = document.getElementById('name');
