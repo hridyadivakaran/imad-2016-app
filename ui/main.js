@@ -39,7 +39,7 @@ button.onclick = function() {
     request.send(null);
 };
 function createAccount () {
-    console.log(`doDBCall on port!`);
+    alert(`doDBCall on port!`);
     var nameInput = document.getElementById('create-account');
     nameInput.value = "Surprise";
     $.ajax({
