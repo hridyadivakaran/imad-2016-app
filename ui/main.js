@@ -41,7 +41,7 @@ button.onclick = function() {
 function createAccount () {
     var nameInput = document.getElementById('create-account');
     nameInput.value = "Surprise";
-    $.ajax({
+   /* $.ajax({
 6:                   type: "POST",
 7:                   url: "server.js/doDBCall",
 8:                   data: "{}",
@@ -52,7 +52,7 @@ function createAccount () {
 13:                   success: function (msg) {
   14:                       nameInput.value = "waht";
   15:                   }
-  16:               });
+  16:               });*/
     document.location.href = '/ui/successMessage.html';
 }
 
