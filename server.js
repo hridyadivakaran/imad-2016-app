@@ -111,6 +111,8 @@ app.get('/test-db' , function (req, res){
     });
 });
 
+//code to make insert db call
+//register-me is post route called from main.js file
 function doDBCall (req) {
     var pool = new Pool(config);
     app.get('/user' , function (req, res){
