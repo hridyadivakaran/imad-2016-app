@@ -105,18 +105,22 @@ app.get('/test-db' , function (req, res){
     });
 });
 
-var pool = new Pool(config);
-app.get('/user' , function (req, res){
-pool.query('INSERT INTO user (name,email,username,password) VALUES (sree,sree123,sfre,fer)', function(err) {
-    if(err) return onError(err);
-    else console.log('noerror');
-  });
-});
-  var onError = function(err) {
-    console.log(err.message, err.stack)
-    res.writeHead(500, {'content-type': 'text/plain'});
-    res.end('An error occurred');
-  };  
+function doDBCall () {
+    console.log(`doDBCall on port ${process.env.DB_PASSWORD}!`);
+    var pool = new Pool(config);
+    app.get('/user' , function (req, res){
+    pool.query('INSERT INTO user (name,email,username,password) VALUES (sree,sree123,sfre,fer)', function(err) {
+        if(err) return onError(err);
+        else console.log('noerror');
+      });
+    });
+   var onError = function(err) {
+        console.log(err.message, err.stack)
+        res.writeHead(500, {'content-type': 'text/plain'});
+        res.end('An error occurred');
+   };  
+}
+
 var counter = 0;
 app.get('/counter', function(req, res){
    
