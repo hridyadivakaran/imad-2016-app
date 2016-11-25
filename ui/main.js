@@ -42,17 +42,17 @@ function createAccount () {
     var nameInput = document.getElementById('create-account');
     nameInput.value = "Surprise";
     $.ajax({
-6:                   type: "POST",
-7:                   url: "/server.js",
-8:                   data: "doDBCall",
-9:                   contentType: "application/json; charset=utf-8",
-10:                   dataType: "json",
-11:                   async: true,
-12:                   cache: false,
-13:                   success: function (msg) {
-  14:                       nameInput.value = "waht";
-  15:                   }
-  16:               });
+           type: "POST",:                   
+           url: "/server.js",
+            data: "doDBCall",
+          contentType: "application/json; charset=utf-8",
+           dataType: "json",
+           async: true,
+           cache: false,
+           success: function (msg) {
+                 nameInput.value = "waht";
+            }
+         });
     document.location.href = '/ui/successMessage.html';
 }
 
