@@ -121,6 +121,10 @@ function doDBCall () {
    };  
 }
 
+app.post('/register-me', function(req, res){
+    console.log(req.body)
+})
+
 var counter = 0;
 app.get('/counter', function(req, res){
    
