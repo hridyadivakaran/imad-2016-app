@@ -42,7 +42,6 @@ function createAccount () {
     var validation = doValidation();
     //document.location.href = '/ui/successMessage.html';
     if(validation === "") {
-    alert("hi");
     var settings = {
       "async": false,
       "crossDomain": true,
