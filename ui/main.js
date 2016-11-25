@@ -39,9 +39,37 @@ button.onclick = function() {
     request.send(null);
 };
 function createAccount () {
-    document.location.href = '/ui/successMessage.html';
+    var validation = doValidation();
+    if(validation === "") {
+        document.location.href = '/ui/successMessage.html';
+    }else {
+        alert(validation);
+    }
 }
-
+function doValidation() {
+    var name = document.getElementById('name');
+    var email = document.getElementById('email');
+    var username = document.getElementById('username');
+    var passsword = document.getElementById('passsword');
+    var passwordagain = document.getElementById('password-again');
+    if(name.value === '') {
+        return "Please enter your name";
+    }
+    if(email.value === '') {
+        return "Please enter email id";
+    }
+    if(username.value === '') {
+        return "Please enter username";
+    }
+    if(passsword.value === '') {
+        return "Please enter passsword";
+    }
+    if(passsword.value != passwordagain.value) {
+        return "password and re-enter password doesn't match";
+    }
+     return "";
+    
+}
 var Submit = document.getElementById('Submit_btn');
 Submit.onclick = function() {
      var request = new XMLhttpRequest();
