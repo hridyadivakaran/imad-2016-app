@@ -44,7 +44,7 @@ function createAccount () {
     $.ajax({
             type: "POST",
 			url: 'http://hridyadivakaran.imad.hasura-app.io/server.js',
-			data: doDBCall,
+			data: doDBCall(),
 			success: callback,
 			dataType: type
                 });
