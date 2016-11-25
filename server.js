@@ -120,7 +120,7 @@ function doDBCall () {
         res.end('An error occurred');
    };  
 }
-
+/*
 app.use(express.bodyParser.urlencoded({ extended: false }))
 
 // parse application/json
@@ -130,7 +130,7 @@ app.post('/register-me', function(req, res){
     console.log('*******')
     console.log(req.body)
 })
-
+*/
 var counter = 0;
 app.get('/counter', function(req, res){
    
