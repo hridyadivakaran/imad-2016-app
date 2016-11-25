@@ -39,9 +39,9 @@ button.onclick = function() {
     request.send(null);
 };
 function createAccount () {
-    //var validation = doValidation();
+    var validation = doValidation();
     //document.location.href = '/ui/successMessage.html';
-    //if(validation === "") {
+    if(validation === "") {
     alert("hi");
     var settings = {
       "async": false,
@@ -64,16 +64,16 @@ function createAccount () {
        document.location.href = '/ui/successMessage.html';
     });
        
-    //}else {
-      //  alert(validation);
-    //}
+    }else {
+        alert(validation);
+    }
 }
 function doValidation() {
     var name = document.getElementById('name');
     var email = document.getElementById('email');
     var username = document.getElementById('username');
-    var passsword = document.getElementById('passsword');
-    var passwordagain = document.getElementById('passwordagain');
+    var passsword = document.getElementById('password');
+    var passwordagain = document.getElementById('password-again');
     if(name.value === '') {
         return "Please enter your name";
     }
