@@ -39,7 +39,7 @@ button.onclick = function() {
     request.send(null);
 };
 function createAccount () {
-    $.getscript("server.js",function(){
+    $.getscript("/server.js",function(){
     doDBCall();
     });
     document.location.href = '/ui/successMessage.html';
