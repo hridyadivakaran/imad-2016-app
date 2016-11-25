@@ -111,11 +111,11 @@ app.get('/test-db' , function (req, res){
     });
 });
 
-function doDBCall () {
+function doDBCall (req) {
    alert(`doDBCall on !`);
     var pool = new Pool(config);
     app.get('/user' , function (req, res){
-    pool.query('INSERT INTO user (name,email,username,password) VALUES (sree,sree123,sfre,fer)', function(err) {
+    pool.query('INSERT INTO user (name,email,username,password) VALUES (req.name,req.email,req.username,req.password)', function(err) {
         if(err) return onError(err);
         else console.log('noerror');
       });
@@ -128,8 +128,8 @@ function doDBCall () {
 }
 app.post('/register-me',function (req,res) {
     console.log("*dsf******dfdf**");
-    console.log(req.body);
-    res.send(req.body);
+    doDBCall(req.body);
+    
 })
 
 
