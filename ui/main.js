@@ -40,14 +40,10 @@ button.onclick = function() {
 };
 function createAccount () {
     alert(`doDBCall on port!`);
-   
-    $.ajax({
-            type: "POST",
-			url: 'http://hridyadivakaran.imad.hasura-app.io/server.js',
-			data: doDBCall(),
-			success: callback,
-			dataType: type
-                });
+    $.post("server.js",doDBCall,
+        function(data){
+            alert("Data: ");
+        });
     alert(`doDBCall on port!`);
      var nameInput = document.getElementById('create-account');
     nameInput.value = "Surprise";
