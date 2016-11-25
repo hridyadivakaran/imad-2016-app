@@ -123,6 +123,7 @@ function doDBCall () {
 app.post('/register-me',function (req,res) {
     console.log("*******dfdf**");
     console.log(req.body);
+    res.send(req.body);
 })
 var bodyParser = require('body-parser')
 app.use(bodyParser.urlencoded({ extended: false }))
