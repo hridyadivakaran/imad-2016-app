@@ -43,7 +43,7 @@ function createAccount () {
     //document.location.href = '/ui/successMessage.html';
     //if(validation === "") {
     alert("hi");
-    var settings = {
+   /* var settings = {
       "async": false,
       "crossDomain": true,
       "url": "http://hridyadivakaran.imad.hasura-app.io/register-me",
@@ -63,7 +63,7 @@ function createAccount () {
     
     $.ajax(settings).done(function (response) {
        document.location.href = '/ui/successMessage.html';
-    });
+    });*/
        
     //}else {
       //  alert(validation);
