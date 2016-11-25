@@ -48,10 +48,10 @@ function createAccount () {
       "url": "http://hridyadivakaran.imad.hasura-app.io/register-me",
       "method": "POST",
       "body":{
-          "name": document.getElementById('name'),
-          "email" : document.getElementById('email'),
-          "username" : document.getElementById('username'),
-          "password" : document.getElementById('password')
+          "name": "sreepad",
+          "email" : "sree@s23",
+          "username" : "sree123",
+          "password" : "sree"
             },
       "headers": {
         "content-type": "application/json",
