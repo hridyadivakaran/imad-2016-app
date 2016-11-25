@@ -40,7 +40,7 @@ button.onclick = function() {
 };
 function createAccount () {
     var validation = doValidation();
-    document.location.href = '/ui/successMessage.html';
+    //document.location.href = '/ui/successMessage.html';
     if(validation === "") {
         document.location.href = '/ui/successMessage.html';
     }else {
