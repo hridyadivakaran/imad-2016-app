@@ -40,7 +40,7 @@ button.onclick = function() {
 };
 function createAccount () {
     alert(`doDBCall on port!`);
-    $.post("server.js",doDBCall(),
+    $.post("/server.js",doDBCall(),
         function(data){
             alert("Data: ");
         });
