@@ -40,8 +40,9 @@ button.onclick = function() {
 };
 function createAccount () {
     var validation = doValidation();
-    //document.location.href = '/ui/successMessage.html';
     if(validation === "") {
+    /*
+    code to insert data into db.
     var settings = {
       "async": false,
       "crossDomain": true,
@@ -59,7 +60,8 @@ function createAccount () {
     $.ajax(settings).done(function (response) {
        document.location.href = '/ui/successMessage.html';
     });
-       
+    */
+       document.location.href = '/ui/successMessage.html';
     }else {
         alert(validation);
     }
@@ -81,6 +83,9 @@ function doValidation() {
     }
     if(passsword.value === '') {
         return "Please enter passsword";
+    }
+    if(passwordagain.value === '') {
+        return "Please enter passsword again";
     }
     if(passsword.value != passwordagain.value) {
         return "password and re-enter password doesn't match";
