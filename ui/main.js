@@ -47,7 +47,7 @@ function createAccount () {
       "crossDomain": true,
       "url": "http://hridyadivakaran.imad.hasura-app.io/register-me",
       "method": "POST",
-      "body":{
+      "data":{
           "name": "sreepad",
           "email" : "sree@s23",
           "username" : "sree123",
