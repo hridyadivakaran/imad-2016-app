@@ -43,22 +43,26 @@ function createAccount () {
     if(validation === "") {
     
     //code to insert data into db.
-    var settings = {
-      "async": false,
-      "crossDomain": true,
-      "url": "http://hridyadivakaran.imad.hasura-app.io/register-me",
-      "method": "POST",
-      "data":{
+    var settings = 
+    
+    $.ajax({
+      async: false,
+      crossDomain: true,
+      url: "http://hridyadivakaran.imad.hasura-app.io/register-me",
+      method: "POST",
+      data:{
           name: "sreepad"
             },
-      "headers": {
+      headers: {
         "content-type": "application/json",
         "cache-control": "no-cache",
+        },
+      success: function( data ){
+        $('#response pre').html( JSON.stringify( data ) );
+        },
+        error: function( jqXhr, textStatus, errorThrown ){
+            console.log( errorThrown );
         }
-    }
-    
-    $.ajax(settings).done(function (response) {
-       document.location.href = '/ui/successMessage.html';
     });
     
        document.location.href = '/ui/successMessage.html';
