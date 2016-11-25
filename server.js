@@ -121,10 +121,10 @@ function doDBCall () {
    };  
 }
 
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(express.bodyParser.urlencoded({ extended: false }))
 
 // parse application/json
-app.use(bodyParser.json())
+app.use(express.bodyParser.json())
 
 app.post('/register-me', function(req, res){
     console.log('*******')
