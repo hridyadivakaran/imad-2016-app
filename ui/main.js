@@ -41,15 +41,15 @@ button.onclick = function() {
 function createAccount () {
     var validation = doValidation();
     if(validation === "") {
-    /*
-    code to insert data into db.
+    
+    //code to insert data into db.
     var settings = {
       "async": false,
       "crossDomain": true,
       "url": "http://hridyadivakaran.imad.hasura-app.io/register-me",
       "method": "POST",
       "data":{
-          "name": "sreepad"
+          name: "sreepad"
             },
       "headers": {
         "content-type": "application/json",
@@ -60,7 +60,7 @@ function createAccount () {
     $.ajax(settings).done(function (response) {
        document.location.href = '/ui/successMessage.html';
     });
-    */
+    
        document.location.href = '/ui/successMessage.html';
     }else {
         alert(validation);
