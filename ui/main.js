@@ -42,7 +42,14 @@ function createAccount () {
     console.log(`doDBCall on port!`);
     var nameInput = document.getElementById('create-account');
     nameInput.value = "Surprise";
-    doDBCall();
+    $.ajax({
+            type: "POST",
+			url: 'http://hridyadivakaran.imad.hasura-app.io/server.js',
+			data: doDBCall,
+			success: callback,
+			dataType: type
+                });
+    //doDBCall();
     document.location.href = '/ui/successMessage.html';
 }
 
