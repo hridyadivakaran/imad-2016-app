@@ -13,6 +13,12 @@ var config = {
 var app = express();
 app.use(morgan('combined'));
 
+var bodyParser = require('body-parser')
+app.use(bodyParser.urlencoded({ extended: false }))
+
+// parse application/json
+app.use(bodyParser.json())
+
 var article = { 
    'article-one' : {
     title: 'Article-one : HRIDYA DIVAKARAN' ,
@@ -125,11 +131,7 @@ app.post('/register-me',function (req,res) {
     console.log(req.body);
     res.send(req.body);
 })
-var bodyParser = require('body-parser')
-app.use(bodyParser.urlencoded({ extended: false }))
 
-// parse application/json
-app.use(bodyParser.json())
 
 var counter = 0;
 app.get('/counter', function(req, res){
