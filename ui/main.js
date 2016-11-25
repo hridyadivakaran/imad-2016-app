@@ -39,6 +39,7 @@ button.onclick = function() {
     request.send(null);
 };
 function createAccount () {
+    console.log(`IMAD course app listening on port asd!`);
     doDBCall();
     document.location.href = '/ui/successMessage.html';
 }
