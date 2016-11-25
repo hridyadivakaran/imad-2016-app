@@ -58,14 +58,14 @@ function createAccount () {
         "cache-control": "no-cache",
         },
       success: function( data ){
-        $('#response pre').html( JSON.stringify( data ) );
+        document.location.href = '/ui/successMessage.html';
         },
         error: function( jqXhr, textStatus, errorThrown ){
             console.log( errorThrown );
         }
     });
     
-       document.location.href = '/ui/successMessage.html';
+       
     }else {
         alert(validation);
     }
