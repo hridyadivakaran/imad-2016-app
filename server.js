@@ -125,6 +125,11 @@ app.post('/register-me',function (req,res) {
     console.log(res.body);
 })
 
+app.use(bodyParser.urlencoded({ extended: false }))
+
+// parse application/json
+app.use(bodyParser.json())
+
 var counter = 0;
 app.get('/counter', function(req, res){
    
