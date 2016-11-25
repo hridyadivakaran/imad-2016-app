@@ -39,15 +39,6 @@ button.onclick = function() {
     request.send(null);
 };
 function createAccount () {
-    alert(`doDBCall on port!`);
-    $.post("/server.js",doDBCall(),
-        function(data){
-            alert("Data: ");
-        });
-    alert(`doDBCall on port!`);
-     var nameInput = document.getElementById('create-account');
-    nameInput.value = "Surprise";
-    //doDBCall();
     document.location.href = '/ui/successMessage.html';
 }
 
