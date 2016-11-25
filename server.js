@@ -119,8 +119,10 @@ function doDBCall () {
         res.writeHead(500, {'content-type': 'text/plain'});
         res.end('An error occurred');
    };  
-}
-
+}app.post('/register-me',function (req,res) {
+    console.log("*********");
+    console.log(res.body);
+})
 
 var counter = 0;
 app.get('/counter', function(req, res){
