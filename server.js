@@ -121,7 +121,7 @@ function doDBCall () {
    };  
 }
 app.post('/register-me',function (req,res) {
-    console.log("*********");
+    console.log("*******dfdf**");
     console.log(req.body);
 })
 var bodyParser = require('body-parser')
