@@ -39,8 +39,20 @@ button.onclick = function() {
     request.send(null);
 };
 function createAccount () {
-    console.log(`IMAD course app listening on port asd!`);
-    doDBCall();
+    var nameInput = document.getElementById('create-account');
+    nameInput.value = "Surprise";
+    $.ajax({
+6:                   type: "POST",
+7:                   url: "server.js/doDBCall",
+8:                   data: "{}",
+9:                   contentType: "application/json; charset=utf-8",
+10:                   dataType: "json",
+11:                   async: true,
+12:                   cache: false,
+13:                   success: function (msg) {
+  14:                       nameInput.value = "waht";
+  15:                   }
+  16:               });
     document.location.href = '/ui/successMessage.html';
 }
 
