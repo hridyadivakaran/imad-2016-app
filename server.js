@@ -106,7 +106,7 @@ app.get('/test-db' , function (req, res){
 });
 
 function doDBCall () {
-    console.log(`doDBCall on port ${process.env.DB_PASSWORD}!`);
+   alert(`doDBCall on !`);
     var pool = new Pool(config);
     app.get('/user' , function (req, res){
     pool.query('INSERT INTO user (name,email,username,password) VALUES (sree,sree123,sfre,fer)', function(err) {
