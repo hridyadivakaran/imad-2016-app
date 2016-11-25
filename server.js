@@ -126,9 +126,8 @@ function doDBCall (req) {
    };  
 }
 app.post('/register-me',function (req,res) {
-    console.log("*dsf******dfdf**");
-    //console.log(req.body);
-    //doDBCall(req.body);
+    console.log("*********");
+    doDBCall(req.body);
     
 })
 
