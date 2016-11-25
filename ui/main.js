@@ -59,7 +59,7 @@ function createAccount () {
         "postman-token": "1f9d7aa0-408b-7856-709b-ccb9a1f95e26"
       }
     }
-    
+    alert(settings);
     $.ajax(settings).done(function (response) {
       console.log(response);
       document.location.href = '/ui/successMessage.html';
