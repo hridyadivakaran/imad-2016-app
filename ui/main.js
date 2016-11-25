@@ -43,7 +43,7 @@ function createAccount () {
     //document.location.href = '/ui/successMessage.html';
     //if(validation === "") {
     var settings = {
-      "async": true,
+      "async": false,
       "crossDomain": true,
       "url": "http://hridyadivakaran.imad.hasura-app.io/register-me",
       "method": "POST",
