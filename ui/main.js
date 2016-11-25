@@ -47,12 +47,12 @@ function createAccount () {
       "crossDomain": true,
       "url": "http://hridyadivakaran.imad.hasura-app.io/register-me",
       "method": "POST",
-      "data":JSON.stringify({
+      "data":{
           "name": "sreepad",
           "email" : "sree@s23",
           "username" : "sree123",
           "password" : "sree"
-            }),
+            },
       "headers": {
         "content-type": "application/json",
         "cache-control": "no-cache",
