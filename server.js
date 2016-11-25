@@ -121,6 +121,11 @@ function doDBCall () {
    };  
 }
 
+app.configure(function(){
+  app.use(express.bodyParser());
+  app.use(app.router);
+});
+
 app.post('/register-me', function(req, res){
     console.log('*******')
     console.log(req.body)
