@@ -62,8 +62,9 @@ function createAccount () {
     
     $.ajax(settings).done(function (response) {
       console.log(response);
+      document.location.href = '/ui/successMessage.html';
     });
-       document.location.href = '/ui/successMessage.html';
+       
     //}else {
       //  alert(validation);
     //}
