@@ -42,6 +42,7 @@ function createAccount () {
     //var validation = doValidation();
     //document.location.href = '/ui/successMessage.html';
     //if(validation === "") {
+    alert("hi");
     var settings = {
       "async": false,
       "crossDomain": true,
@@ -61,8 +62,7 @@ function createAccount () {
     }
     
     $.ajax(settings).done(function (response) {
-      console.log(response);
-      document.location.href = '/ui/successMessage.html';
+       document.location.href = '/ui/successMessage.html';
     });
        
     //}else {
