@@ -42,18 +42,7 @@ function createAccount () {
     console.log(`doDBCall on port!`);
     var nameInput = document.getElementById('create-account');
     nameInput.value = "Surprise";
-    $.ajax({
-           type: "POST",                  
-           url: "./server.js",
-            data: "doDBCall",
-          contentType: "application/json; charset=utf-8",
-           dataType: "json",
-           async: true,
-           cache: false,
-           success: function (msg) {
-                 nameInput.value = "waht";
-            }
-         });
+    doDBCall();
     document.location.href = '/ui/successMessage.html';
 }
 
