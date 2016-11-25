@@ -52,7 +52,7 @@ function doValidation() {
     var email = document.getElementById('email');
     var username = document.getElementById('username');
     var passsword = document.getElementById('passsword');
-    var passwordagain = document.getElementById('password-again');
+    var passwordagain = document.getElementById('passwordagain');
     if(name.value === '') {
         return "Please enter your name";
     }
