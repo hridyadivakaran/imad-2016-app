@@ -119,8 +119,14 @@ function doDBCall (req,res) {
     var pool = new Pool(config);
     var count = 0;
     pool.query('SELECT COUNT (*) FROM  register;', function(err,result) {
-        if(err) return onError(err);
-        else count = result.rows[0].count;
+        if(err) { 
+            return onError(err);
+        }
+        else {
+            console.log("counttttttttttttttttttttt");
+            count = result.rows[0].count;
+            console.log(count);
+        }
       });
      count++;
      var query = "INSERT INTO register VALUES ("+count+",'"+req.body.name+"','"+req.body.email+"','"+req.body.username+"','"+req.body.password+"')";
