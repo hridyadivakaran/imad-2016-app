@@ -130,7 +130,8 @@ function doDBCall (reqs) {
    };  
 }
 app.post('/register-me',function (req,res) {
-    console.log("*********");
+    console.log("***dsdfsfsdfsdfsfs****");
+     console.log(req.data);
     doDBCall(req.data);
     
 });
