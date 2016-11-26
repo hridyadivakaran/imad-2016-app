@@ -120,7 +120,7 @@ function doDBCall (req,res) {
     
     pool.query('SELECT COUNT (*) FROM  register;', function(err,result) {
         if(err) return onError(err);
-        else console.log(result.row.count);
+        else console.log(result);
       });
     pool.query('INSERT INTO register VALUES (2,'+req.body.name+','+req.body.email+','+req.body.username+','+req.body.password+')', function(err) {
         if(err) return onError(err);
