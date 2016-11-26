@@ -129,6 +129,7 @@ function doDBCall (req) {
 }
 app.post('/register-me',function (req,res) {
     console.log("*********");
+    alert(JSON.stringify(req.body)); 
     doDBCall(req.body);
     
 })
