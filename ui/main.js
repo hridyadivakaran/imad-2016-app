@@ -71,7 +71,7 @@ function createAccount () {
       alert("success");
     });
     
-    document.location.href = '/ui/successMessage.html';
+    //document.location.href = '/ui/successMessage.html';
     }else {
         alert(validation);
     }
@@ -98,7 +98,7 @@ function doValidation() {
         return "Please enter passsword again";
     }
     if(passsword.value != passwordagain.value) {
-        return "password and re-enter password doesn't match";
+        return "Password and Password Again doesn't match";
     }
      return "";
     
