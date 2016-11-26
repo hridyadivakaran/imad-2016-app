@@ -122,7 +122,7 @@ function doDBCall (req,res) {
         if(err) return onError(err);
         else console.log(result);
       });
-    pool.query('INSERT INTO register VALUES ('+req.body.name+','+reqs.body.email+','+reqs.body.username+','+reqs.body.password+')', function(err) {
+    pool.query('INSERT INTO register VALUES (2,'+req.body.name+','+reqs.body.email+','+reqs.body.username+','+reqs.body.password+')', function(err) {
         if(err) return onError(err);
         else console.log('noerror');
       });
