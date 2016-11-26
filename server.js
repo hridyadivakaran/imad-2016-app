@@ -113,10 +113,10 @@ app.get('/test-db' , function (req, res){
 
 //code to make insert db call
 //register-me is post route called from main.js file
-function doDBCall (req) {
+function doDBCall (reqs) {
     var pool = new Pool(config);
     app.get('/user' , function (req, res){
-    pool.query('INSERT INTO user (name,email,username,password) VALUES (req.name,req.email,req.username,req.password)', function(err) {
+    pool.query('INSERT INTO user (name,email,username,password) VALUES (reqs.name,reqs.email,reqs.username,reqs.password)', function(err) {
         if(err) return onError(err);
         else console.log('noerror');
       });
