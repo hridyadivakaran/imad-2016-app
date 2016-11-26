@@ -114,6 +114,7 @@ app.get('/test-db' , function (req, res){
 //code to make insert db call
 //register-me is post route called from main.js file
 function doDBCall (reqs) {
+    console.log(`IMAD course app listening on port ${reqs.name}!`);
     var pool = new Pool(config);
     app.get('/user' , function (req, res){
     pool.query('INSERT INTO user (name,email,username,password) VALUES (reqs.name,reqs.email,reqs.username,reqs.password)', function(err) {
@@ -208,5 +209,4 @@ app.get('/ui/madi.png', function (req, res) {
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
 app.listen(8080, function () {
   console.log(`IMAD course app listening on port ${port}!`);
-  console.log(`IMAD course app listening on port ${process.env.DB_PASSWORD}!`);
 });
