@@ -48,7 +48,7 @@ function createAccount () {
     var password = document.getElementById('password');
     alert("name "+name.value+" email "+email.value+" username "+username.value+" password "+password.value);
     //code to insert data into db.
-    var settings = {
+    /*var settings = {
       "async": true,
       "crossDomain": true,
       "url": "http://hridyadivakaran.imad.hasura-app.io/register-me",
@@ -69,6 +69,16 @@ function createAccount () {
     $.ajax(settings).done(function (response) {
       //document.location.href = '/ui/successMessage.html';
       alert("success");
+    });*/
+    $.post("http://hridyadivakaran.imad.hasura-app.io/register-me", //Required URL of the page on server
+    { // Data Sending With Request To Server
+          name: sree,
+          email : sfer,
+          username : are,
+          password : ares
+    },
+    function(response,status){ // Required Callback Function
+    alert("success");
     });
     
     //document.location.href = '/ui/successMessage.html';
