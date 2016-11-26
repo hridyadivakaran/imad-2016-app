@@ -124,6 +124,7 @@ function doDBCall (req,res) {
       });
      count++;
      var query = 'INSERT INTO register VALUES ("'+count+'","'+req.body.name+'","'+req.body.email+'","'+req.body.username+'","'+req.body.password+'")';
+     console.log(query);
      
     pool.query('INSERT INTO register VALUES ("'+count+'","'+req.body.name+'","'+req.body.email+'","'+req.body.username+'","'+req.body.password+'")', function(err) {
         if(err) return onError(err);
