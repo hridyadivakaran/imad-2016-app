@@ -41,7 +41,7 @@ button.onclick = function() {
 function createAccount () {
     var validation = doValidation();
     if(validation === "") {
-    
+    /*
     var name = document.getElementById('name');
     var email = document.getElementById('email');
     var username = document.getElementById('username');
@@ -69,7 +69,7 @@ function createAccount () {
     $.ajax(settings).done(function (response) {
       //document.location.href = '/ui/successMessage.html';
       alert("success");
-    });*/
+    });
     $.post("http://hridyadivakaran.imad.hasura-app.io/register-me", //Required URL of the page on server
     { // Data Sending With Request To Server
           name: "sree",
@@ -79,9 +79,9 @@ function createAccount () {
     },
     function(response,status){ // Required Callback Function
     alert("success");
-    });
+    });*/
     
-    //document.location.href = '/ui/successMessage.html';
+    document.location.href = '/ui/successMessage.html';
     }else {
         alert(validation);
     }
