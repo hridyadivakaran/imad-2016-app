@@ -43,24 +43,31 @@ function createAccount () {
     if(validation === "") {
     
     //code to insert data into db.
-    /*
+    
     var settings = {
       "async": true,
       "crossDomain": true,
       "url": "http://hridyadivakaran.imad.hasura-app.io/register-me",
       "method": "POST",
+      "data":{
+          "name": document.getElementById('name').value,
+          "email" : document.getElementById('email').value,
+          "username" : document.getElementById('username').value,
+          "password" : document.getElementById('password').value
+      },
       "headers": {
         "content-type": "application/json",
         "cache-control": "no-cache",
         "postman-token": "40592844-8f13-fb78-43c6-44feedb8e0ae"
       }
-    }
+    };
     
     $.ajax(settings).done(function (response) {
-      document.location.href = '/ui/successMessage.html';
+      //document.location.href = '/ui/successMessage.html';
+      alert("success");
     });
-    */
-    document.location.href = '/ui/successMessage.html';
+    
+    //document.location.href = '/ui/successMessage.html';
     }else {
         alert(validation);
     }
