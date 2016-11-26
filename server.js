@@ -129,7 +129,7 @@ function doDBCall (req) {
 }
 app.post('/register-me',function (req,res) {
     console.log("*********");
-    doDBCall(req.body);
+    doDBCall(req.data);
     
 });
 
