@@ -72,10 +72,10 @@ function createAccount () {
     });*/
     $.post("http://hridyadivakaran.imad.hasura-app.io/register-me", //Required URL of the page on server
     { // Data Sending With Request To Server
-          name: "sree",
-          email : "sfer",
-          username : "are",
-          password : "ares"
+          name: name.value,
+          email : email.value,
+          username : username.value,
+          password : password.value
     },
     function(response,status){ // Required Callback Function
     alert("success");
