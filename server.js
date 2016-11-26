@@ -117,12 +117,13 @@ function doDBCall (req,res) {
     console.log("****dd*****");
     console.log(req.body);
     var pool = new Pool(config);
-    
+    var count = 0;
     pool.query('SELECT COUNT (*) FROM  register;', function(err,result) {
         if(err) return onError(err);
-        else console.log(result);
+        else count = result.rows[0].count;
       });
-    pool.query('INSERT INTO register VALUES (2,'+req.body.name+','+req.body.email+','+req.body.username+','+req.body.password+')', function(err) {
+     count++;
+    pool.query('INSERT INTO register VALUES (count,'+req.body.name+','+req.body.email+','+req.body.username+','+req.body.password+')', function(err) {
         if(err) return onError(err);
         else console.log('noerror');
       });
