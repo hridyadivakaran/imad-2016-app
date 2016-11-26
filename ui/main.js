@@ -41,7 +41,11 @@ button.onclick = function() {
 function createAccount () {
     var validation = doValidation();
     if(validation === "") {
-    
+    var name = document.getElementById('name');
+    var email = document.getElementById('email');
+    var username = document.getElementById('username');
+    var password = document.getElementById('password');
+    alert("name "+name.value+"email "+email.value+"username "+username.value+"password "+password.value);
     //code to insert data into db.
     
     var settings = {
