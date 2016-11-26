@@ -116,12 +116,11 @@ app.get('/test-db' , function (req, res){
 function doDBCall (reqs) {
     console.log(`IMAD course app listening on port ${reqs.name}!`);
     var pool = new Pool(config);
-    app.get('/user' , function (req, res){
     pool.query('INSERT INTO user (name,email,username,password) VALUES (reqs.name,reqs.email,reqs.username,reqs.password)', function(err) {
         if(err) return onError(err);
         else console.log('noerror');
       });
-    });
+   
    var onError = function(err) {
         console.log(err.message, err.stack);
         res.writeHead(500, {'content-type': 'text/plain'});
