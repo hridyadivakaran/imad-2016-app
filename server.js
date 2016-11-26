@@ -126,7 +126,7 @@ function doDBCall (req,res) {
     // var query = 'INSERT INTO register VALUES ('+count+','+
     pool.query('INSERT INTO register VALUES (count+","'+req.body.name+'","'+req.body.email+'","'+req.body.username+'","'+req.body.password+'")', function(err) {
         if(err) return onError(err);
-        else console.log('noerror');
+        else console.log('success');
       });
    
    var onError = function(err) {
