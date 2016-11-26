@@ -117,7 +117,7 @@ function doDBCall (req,res) {
     console.log("****dd*****");
     console.log(req.body);
     var pool = new Pool(config);
-    pool.query('INSERT INTO register VALUES (req.body.name,reqs.body.email,reqs.body.username,reqs.body.password)', function(err) {
+    pool.query('INSERT INTO register VALUES ('+req.body.name+','+reqs.body.email+','+reqs.body.username+','+reqs.body.password+')', function(err) {
         if(err) return onError(err);
         else console.log('noerror');
       });
