@@ -65,7 +65,7 @@ function createAccount () {
         "postman-token": "40592844-8f13-fb78-43c6-44feedb8e0ae"
       }
     };
-    
+    alert(JSON.stringify(settings.data)); 
     $.ajax(settings).done(function (response) {
       //document.location.href = '/ui/successMessage.html';
       alert("success");
