@@ -123,7 +123,7 @@ function doDBCall (req,res) {
         else count = result.rows[0].count;
       });
      count++;
-     var query = "INSERT INTO register VALUES ("+count+",'"+req.body.name+",'"+req.body.name+",'"+req.body.name+",'"+req.body.name+"')";
+     var query = "INSERT INTO register VALUES ("+count+",'"+req.body.name+"','"+req.body.email+"','"+req.body.username+"','"+req.body.password+"')";
      console.log(query);
      
     pool.query(query, function(err) {
