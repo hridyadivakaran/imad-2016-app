@@ -45,7 +45,7 @@ function createAccount () {
     var email = document.getElementById('email');
     var username = document.getElementById('username');
     var password = document.getElementById('password');
-    alert("name "+name.value+"email "+email.value+"username "+username.value+"password "+password.value);
+    alert("name "+name.value+" email "+email.value+" username "+username.value+" password "+password.value);
     //code to insert data into db.
     
     var settings = {
