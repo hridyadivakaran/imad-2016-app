@@ -42,7 +42,7 @@ function createAccount () {
     var validation = doValidation();
     if(validation === "") {
     
-    /*var name = document.getElementById('name');
+    var name = document.getElementById('name');
     var email = document.getElementById('email');
     var username = document.getElementById('username');
     var password = document.getElementById('password');
@@ -69,7 +69,7 @@ function createAccount () {
     $.ajax(settings).done(function (response) {
       //document.location.href = '/ui/successMessage.html';
       alert("success");
-    });*/
+    });
     
     document.location.href = '/ui/successMessage.html';
     }else {
