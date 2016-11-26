@@ -114,7 +114,9 @@ app.get('/test-db' , function (req, res){
 //code to make insert db call
 //register-me is post route called from main.js file
 function doDBCall (reqs) {
-    console.log(`IMAD course app listening on port ${reqs.name}!`);
+    console.log("****dd*****");
+    console.log(reqs);
+    
     var pool = new Pool(config);
     pool.query('INSERT INTO user (name,email,username,password) VALUES (reqs.name,reqs.email,reqs.username,reqs.password)', function(err) {
         if(err) return onError(err);
