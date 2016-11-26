@@ -122,7 +122,7 @@ function doDBCall (req) {
       });
     });
    var onError = function(err) {
-        console.log(err.message, err.stack)
+        console.log(err.message, err.stack);
         res.writeHead(500, {'content-type': 'text/plain'});
         res.end('An error occurred');
    };  
@@ -131,7 +131,7 @@ app.post('/register-me',function (req,res) {
     console.log("*********");
     doDBCall(req.body);
     
-})
+});
 
 
 var counter = 0;
