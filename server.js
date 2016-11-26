@@ -151,6 +151,17 @@ app.post('/register-me',function (req,res) {
     
 });
 
+var pool = new Pool(config);
+app.get('/register-db' , function (req, res){
+     pool.query('SELECT * FROM register', function(err, result) {
+       //handle an error from the query
+      if(err) {
+          res.status(500).send(err.toString());
+      }else{
+      res.send(JSON.stringify(result.rows));
+      }
+    });
+});
 
 var counter = 0;
 app.get('/counter', function(req, res){
