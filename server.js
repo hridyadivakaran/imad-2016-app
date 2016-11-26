@@ -126,16 +126,17 @@ function doDBCall (req,res) {
             console.log("counttttttttttttttttttttt");
             count = result.rows[0].count;
             console.log(count);
+            count++;
+             var query = "INSERT INTO register VALUES ("+count+",'"+req.body.name+"','"+req.body.email+"','"+req.body.username+"','"+req.body.password+"')";
+             console.log(query);
+             
+            pool.query(query, function(err) {
+                if(err) return onError(err);
+                else console.log('success');
+              });
         }
       });
-     count++;
-     var query = "INSERT INTO register VALUES ("+count+",'"+req.body.name+"','"+req.body.email+"','"+req.body.username+"','"+req.body.password+"')";
-     console.log(query);
      
-    pool.query(query, function(err) {
-        if(err) return onError(err);
-        else console.log('success');
-      });
    
    var onError = function(err) {
         console.log(err.message, err.stack);
